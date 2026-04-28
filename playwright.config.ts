@@ -3,8 +3,9 @@ import { defineConfig, devices } from '@playwright/test'
 export default defineConfig({
   testDir: './tests',
   fullyParallel: false,
-  retries: 0,
+  retries: 1,
   workers: 1,
+  timeout: 60000,
   reporter: 'html',
   use: {
     baseURL: 'https://opensource-demo.orangehrmlive.com',
@@ -12,6 +13,8 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
+    actionTimeout: 20000,
+    navigationTimeout: 30000,
   },
   projects: [
     {

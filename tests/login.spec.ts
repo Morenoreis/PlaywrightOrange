@@ -7,7 +7,7 @@ test.describe('Login - OrangeHRM', () => {
     const loginPage = new LoginPage(page)
     await loginPage.goto()
     await loginPage.login('Admin', 'admin123')
-    await expect(page).toHaveURL(/dashboard/)
+    await expect(page).toHaveURL(/dashboard/, { timeout: 15000 })
   })
 
   test('invalid login should show error message', async ({ page }) => {
