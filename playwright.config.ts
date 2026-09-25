@@ -9,7 +9,7 @@ export default defineConfig({
   reporter: 'html',
   use: {
     baseURL: 'https://opensource-demo.orangehrmlive.com',
-    headless: false,
+    headless: !!process.env.CI,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
