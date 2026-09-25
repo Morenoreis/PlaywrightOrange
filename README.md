@@ -1,3 +1,5 @@
+![Playwright Tests](https://github.com/Morenoreis/PlaywrightOrange/actions/workflows/playwright.yml/badge.svg)
+
 # PlaywrightOrange 🍊
 
 End-to-end test automation project using **Playwright + TypeScript** on the [OrangeHRM](https://opensource-demo.orangehrmlive.com) demo website.
@@ -130,7 +132,13 @@ This project follows the **Page Object Model (POM)** pattern:
 - Project is part of a multi-framework QA portfolio
 
 ---
+## Continuous Integration
 
+Tests run automatically on every push and pull request via GitHub Actions. The Playwright HTML report is uploaded as a workflow artifact and can be downloaded from the Actions tab, or generated locally with:
+
+```bash
+npx playwright show-report
+```
 ##  Author
 
 **Moreno Barros Reis**
